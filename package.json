@@ -1,0 +1,17 @@
+{
+  "name": "expense-tracker",
+  "version": "1.0.0",
+  "description": "A personal finance tracker application built with HTML, Tailwind CSS, and JavaScript.",
+  "main": "index.html",
+  "scripts": {
+    "build:css": "tailwindcss -i ./css/tailwind.css -o ./public/css/main.css",
+    "watch": "tailwindcss -i ./css/tailwind.css -o ./public/css/main.css --watch"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.7",
+    "tailwindcss": "^3.4.1",
+    "tailwindcss-animate": "^1.0.7"
+  }
+}
