@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Expense Tracker</title>
+    <link rel="stylesheet" href="../public/css/main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body class="bg-background dark:bg-gray-900 text-text-primary dark:text-gray-200">
+    <div id="header-placeholder"></div>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div id="onboarding-section" class="hidden text-center bg-surface dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+            <h2 class="text-3xl font-bold mb-2">Welcome to ExpenseTracker!</h2>
+            <p class="text-text-secondary dark:text-gray-400 mb-6 max-w-xl mx-auto">Let's get started by adding your first transaction.</p>
+            <a href="add_edit_transaction.html" class="btn-primary px-8 py-3"><i class="fas fa-plus mr-2"></i>Add First Transaction</a>
+        </div>
+        
+        <div id="dashboard-content" class="hidden grid grid-cols-1 lg:grid-cols-4 gap-6">
+            <div class="lg:col-span-3 space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="card p-6"><p class="text-sm font-medium text-text-secondary dark:text-gray-400">Total Income</p><p id="total-income" class="text-2xl font-bold text-success font-data">₹0.00</p></div>
+                    <div class="card p-6"><p class="text-sm font-medium text-text-secondary dark:text-gray-400">Total Expenses</p><p id="total-expenses" class="text-2xl font-bold text-error font-data">₹0.00</p></div>
+                    <div class="card p-6"><p class="text-sm font-medium text-text-secondary dark:text-gray-400">Balance</p><p id="current-balance" class="text-2xl font-bold text-primary font-data">₹0.00</p></div>
+                </div>
+                <div class="card p-6"><h3 class="text-lg font-semibold mb-6">Expense Breakdown</h3><div class="relative h-80"><canvas id="expenseChart"></canvas></div></div>
+                <div class="card p-6"><h3 class="text-lg font-semibold mb-6">Recent Transactions</h3><div id="recent-transactions-list" class="space-y-4"></div></div>
+            </div>
+            <div class="lg:col-span-1 space-y-6">
+                 <div class="card p-6"><h3 class="text-lg font-semibold mb-4">Quick Actions</h3><a href="add_edit_transaction.html" class="btn-primary w-full">Add Transaction</a></div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="../js/main.js"></script>
+    <script type="module" src="../js/dashboard.js"></script>
+</body>
+</html>
